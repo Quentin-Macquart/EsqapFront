@@ -19,7 +19,7 @@ function SchemaChallenge({ whatChallenge, solution, winChallenge }) {
   };
 
   return (
-    <SSchemaChallenges>
+    <SSchemaChallenges key={whatChallenge.number}>
       <div>
         <img src={whatChallenge.backgroundImg} alt="Forest" />
       </div>
@@ -41,8 +41,8 @@ function SchemaChallenge({ whatChallenge, solution, winChallenge }) {
           <p>{whatChallenge.action}</p>
         </SwiperSlide>
         <SwiperSlide className="swiperComponent">
+          <h3> Que dois-je faire?</h3>
           <section>
-            <h3> Que dois-je faire?</h3>
             <button
               type="button"
               onClick={() => {

@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import SchemaChallenge from 'SchemaChallenge';
 import Header from 'Header';
 import axios from 'axios';
+import Solutions from 'Solutions';
+import gallySong from './gunnm-ost-alita-battle-angel-gallys-theme-with-light-animation.mp3';
 import SChallenges from './style';
 
 function Challenges() {
@@ -18,7 +20,6 @@ function Challenges() {
   }, []);
 
   const validateChallenge = () => {
-    console.log('yeah');
     const newContent = [...challContents];
     newContent.shift();
     setChallContents(newContent);
@@ -26,7 +27,15 @@ function Challenges() {
   return (
     <>
       <Header />
-      {challContents.length && (
+      <audio autoPlay="true" loop="true" src={gallySong}>
+        <track
+          src="captions_en.vtt"
+          kind="captions"
+          srcLang="en"
+          label="english_captions"
+        />
+      </audio>
+      {challContents.length ? (
         <SChallenges>
           <SchemaChallenge
             whatChallenge={challContents[0]}
@@ -34,6 +43,8 @@ function Challenges() {
             winChallenge={validateChallenge}
           />
         </SChallenges>
+      ) : (
+        <Solutions />
       )}
     </>
   );

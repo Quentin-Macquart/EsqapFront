@@ -42,25 +42,42 @@ const SSchemaChallenges = styled.main`
     top: 15%;
   }
   h3 {
+    text-align: center;
     font-size: 30px;
   }
   section {
+    margin-top: 30px;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
-    justify-content: space-around;
-    height: 300px;
+    height: 200px;
   }
   section button {
     font-family: 'Zen Kurenaido', sans-serif;
-    font-size: 20px;
-    background-color: grey;
-    border: none;
-    padding: 0;
+    opacity: 0.8;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #ffffff, 0 0 2rem #e99f17,
+      0 0 0.8rem#e99f17, 0 0 2.8rem #e99f17, inset 0 0 1.3rem #e99f17;
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
+    width: 80%;
+    height: 80px;
+    position: relative;
+    padding: 0.8em 2.2em;
     cursor: pointer;
-    height: 50px;
-    width: 90%;
+    background: #d8900a;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    mix-blend-mode: color-dodge;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
   }
+
   .title {
     overflow: hidden;
     white-space: nowrap;

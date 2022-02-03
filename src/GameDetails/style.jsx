@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const SGameDetails = styled.article`
   height: 100vh;
+  overflow: hidden;
   font-family: 'Zen Kurenaido', sans-serif;
 
   img {
@@ -19,7 +20,6 @@ const SGameDetails = styled.article`
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset,
       rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    margin-top: 90px;
     padding: 36px;
     width: 80vw;
     height: 500px;
@@ -29,13 +29,14 @@ const SGameDetails = styled.article`
     background-color: #1d1c1c8d;
   }
   p {
+    width: 90vw;
     color: #dbdada;
     margin-top: 20%;
     font-size: 27px;
     text-align: center;
   }
   h3 {
-    margin-top: 100px;
+    margin-top: 25px;
     width: 100vw;
     position: absolute;
     z-index: 4;
