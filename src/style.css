@@ -1,0 +1,30 @@
+body {
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 90vw;
+  padding: 0;
+  display: table;
+  background-color: #171717;
+  color: #000;
+  line-height: 1.6;
+
+  /* position: relative; */
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
